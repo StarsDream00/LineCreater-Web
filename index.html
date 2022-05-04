@@ -17,6 +17,10 @@
         display: block;
       }
     </style>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="background: #231F20"></canvas>
+    <script src="Build/bin.loader.js"></script>
     <script type="text/javascript">
       $(function() {
         $(window).resize(resizeCanvas);
@@ -27,10 +31,6 @@
         $("#unity").attr("height", $(window).get(0).innerHeight);
       };
     </script>
-  </head>
-  <body style="text-align: center">
-    <canvas id="unity-canvas" style="background: #231F20"></canvas>
-    <script src="Build/bin.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "Build/bin.data.unityweb",
