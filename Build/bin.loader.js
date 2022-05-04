@@ -2593,7 +2593,7 @@ function createUnityInstance(e, t, r) {
         },
     };
     return new Promise(function (e, t) {
-        /*l.SystemInfo.hasWebGL
+        l.SystemInfo.hasWebGL
             ? l.SystemInfo.hasWasm
                 ? (1 == l.SystemInfo.hasWebGL &&
                       l.print(
@@ -2605,7 +2605,7 @@ function createUnityInstance(e, t, r) {
                       r(1), delete l.startupErrorHandler, e(m);
                   }),
                   c())
-                : t("Your browser does not support WebAssembly.")
-            : t("Your browser does not support WebGL.");*/
+                : null
+            : null;
     });
 }

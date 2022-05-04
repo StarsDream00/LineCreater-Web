@@ -27,6 +27,7 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
       }
+      var sUserAgent = navigator.userAgent.toLowerCase();
       var bIsIpad = sUserAgent.match(/ipad/) == "ipad";
       var bIsIphoneOs = sUserAgent.match(/iphone os/) == "iphone os";
       if (bIsIpad || bIsIphoneOs) {
