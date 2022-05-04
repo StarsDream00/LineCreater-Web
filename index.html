@@ -31,9 +31,7 @@
       var bIsIpad = sUserAgent.match(/ipad/) == "ipad";
       var bIsIphoneOs = sUserAgent.match(/iphone os/) == "iphone os";
       if (bIsIpad || bIsIphoneOs) {
-        let canvas = document.getElementById("unity-canvas");
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        resizeCanvas();
       } else {
         window.onresize = () => {
           resizeCanvas();
