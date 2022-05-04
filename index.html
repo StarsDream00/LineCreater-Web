@@ -3,7 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | LineCreater</title>
+    <title>LineCreater</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html, body {
+        height: 100%;
+        width: 100%;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+    <script type="text/javascript">
+      $(function() {
+        $(window).resize(resizeCanvas);
+        resizeCanvas();
+      });
+      function resizeCanvas() {
+        $("#unity").attr("width", $(window).get(0).innerWidth);
+        $("#unity").attr("height", $(window).get(0).innerHeight);
+      };
+    </script>
   </head>
   <body style="text-align: center">
     <canvas id="unity-canvas" style="background: #231F20"></canvas>
