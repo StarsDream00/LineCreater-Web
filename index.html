@@ -23,13 +23,14 @@
     <script src="Build/bin.loader.js"></script>
     <script type="text/javascript">
       function resizeCanvas() {
-        $("#unity-canvas").attr("width", window.innerWidth);
-        $("#unity-canvas").attr("height", window.innerHeight);
+        let canvas = document.getElementById("unity-canvas");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
       }
       resizeCanvas();
-      window.onresize(() => {
+      window.onresize = () => {
         resizeCanvas();
-      });
+      };
     </script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
