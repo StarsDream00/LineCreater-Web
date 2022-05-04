@@ -27,10 +27,17 @@
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
       }
-      resizeCanvas();
-      window.onresize = () => {
-        resizeCanvas();
-      };
+      var bIsIpad = sUserAgent.match(/ipad/) == "ipad";
+      var bIsIphoneOs = sUserAgent.match(/iphone os/) == "iphone os";
+      if (bIsIpad || bIsIphoneOs) {
+        let canvas = document.getElementById("unity-canvas");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      } else {
+        window.onresize = () => {
+          resizeCanvas();
+        };
+      }
     </script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
