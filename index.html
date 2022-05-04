@@ -22,14 +22,14 @@
     <canvas id="unity-canvas" style="background: #231F20"></canvas>
     <script src="Build/bin.loader.js"></script>
     <script type="text/javascript">
-      $(function() {
-        $(window).resize(resizeCanvas);
+      function resizeCanvas() {
+        $("#unity-canvas").attr("width", window.innerWidth);
+        $("#unity-canvas").attr("height", window.innerHeight);
+      }
+      resizeCanvas();
+      window.onresize(() => {
         resizeCanvas();
       });
-      function resizeCanvas() {
-        $("#unity").attr("width", $(window).get(0).innerWidth);
-        $("#unity").attr("height", $(window).get(0).innerHeight);
-      };
     </script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
